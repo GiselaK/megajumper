@@ -7,15 +7,16 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import com.missionbit.megajumper.Platforms;
+
 public class MegaJumper extends ApplicationAdapter {
     public static SpriteBatch batch;
     public static int width;
     public static int height;
     public int score;
     public static OrthographicCamera camera;
+    public Platforms platforms;
 
-
-    private Platform[] platforms;
     private font Font;
 
     @Override
@@ -25,12 +26,8 @@ public class MegaJumper extends ApplicationAdapter {
         height = Gdx.graphics.getHeight();
         camera = new OrthographicCamera(width,height);
         Font = new font();
-        platforms = new Platform[4];
 
-        for (int i = 0; i < 4; i++) {
-            platforms[i] = new Platform();
-            platforms[i].create();
-        }
+        platforms = new Platforms(10);
 
         player.create();
         Font.create();
@@ -50,10 +47,7 @@ public class MegaJumper extends ApplicationAdapter {
         player.resetGame();
         Font.resetGame();
         camera.position.set(width/2,height/2,0);
-        platforms[0].resetGame(300, 0);
-        platforms[1].resetGame(0, 400);
-        platforms[2].resetGame(300, 750);
-        platforms[3].resetGame(300, 750);
+        platforms.reset();
 
         score = 0;
 
@@ -62,32 +56,25 @@ public class MegaJumper extends ApplicationAdapter {
     private void updateGame() {
         Font.update();
         player.velocityMod(Gdx.input.getAccelerometerX()*-200, 'x');
-        if (Gdx.input.justTouched()) {
-            player.velocityMod(500, 'y');
+
+
+
+        if (platforms.checkCollision(camera)) {
+            player.velocityMod(750, 'y');
             camera.position.y=player.playerPosition.y;
         }
 
-        for (int i = 0; i < 4; i++) {
-            if (player.playerBounds.overlaps(platforms[i].platformBounds)){
-                player.velocityMod(500, 'y');
-                camera.position.y=player.playerPosition.y;
-            }
-        }
         player.update();
         camera.position.y=player.playerPosition.y;
     }
 
     private void drawGame() {
-
         batch.begin();
         Font.drawGame();
         camera.update();
         batch.setProjectionMatrix(camera.combined);
         batch.draw(player.playerImage, player.playerPosition.x, player.playerPosition.y);
-        for (int i = 0; i < 3; i++) {
-            batch.draw(platforms[i].platformImage, platforms[i].platformBounds.x, platforms[i].platformBounds.y);
-        }
-
+        platforms.draw(batch);
         batch.end();
     }
 }
