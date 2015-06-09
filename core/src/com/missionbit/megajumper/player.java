@@ -36,6 +36,7 @@ public class player {
             playerVelocity.y = value;
         }
     }
+
     public static void update() {
         float deltaTime = Gdx.graphics.getDeltaTime();
         playerVelocity.add(gravity);
