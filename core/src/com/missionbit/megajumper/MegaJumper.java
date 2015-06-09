@@ -4,6 +4,7 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class MegaJumper extends ApplicationAdapter {
@@ -15,6 +16,7 @@ public class MegaJumper extends ApplicationAdapter {
 
 
     private Platform[] platforms;
+    private font Font;
 
     @Override
     public void create () {
@@ -22,6 +24,7 @@ public class MegaJumper extends ApplicationAdapter {
         width = Gdx.graphics.getWidth();
         height = Gdx.graphics.getHeight();
         camera = new OrthographicCamera(width,height);
+        Font = new font();
         platforms = new Platform[4];
 
         for (int i = 0; i < 4; i++) {
@@ -30,7 +33,7 @@ public class MegaJumper extends ApplicationAdapter {
         }
 
         player.create();
-        font.create();
+        Font.create();
         resetGame();
     }
 
@@ -45,7 +48,7 @@ public class MegaJumper extends ApplicationAdapter {
 
     private void resetGame() {
         player.resetGame();
-        font.resetGame();
+        Font.resetGame();
         camera.position.set(width/2,height/2,0);
         platforms[0].resetGame(300, 0);
         platforms[1].resetGame(0, 400);
@@ -57,7 +60,7 @@ public class MegaJumper extends ApplicationAdapter {
     }
 
     private void updateGame() {
-        font.update();
+        Font.update();
         player.velocityMod(Gdx.input.getAccelerometerX()*-200, 'x');
         if (Gdx.input.justTouched()) {
             player.velocityMod(500, 'y');
@@ -75,8 +78,9 @@ public class MegaJumper extends ApplicationAdapter {
     }
 
     private void drawGame() {
-        font.drawGame();
+
         batch.begin();
+        Font.drawGame();
         camera.update();
         batch.setProjectionMatrix(camera.combined);
         batch.draw(player.playerImage, player.playerPosition.x, player.playerPosition.y);

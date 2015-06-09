@@ -1,6 +1,7 @@
 package com.missionbit.megajumper;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.missionbit.megajumper.MegaJumper;
 
@@ -9,20 +10,21 @@ import com.missionbit.megajumper.MegaJumper;
  */
 public class font {
     private BitmapFont font;
-    private static int score;
+    private int score;
 
     public void create() {
 //        font = new Texture("font.png");
-//        font = new BitmapFont(Gdx.files.internal("font.fnt"), Gdx.files.internal("font.png"), false);
+        font = new BitmapFont(Gdx.files.internal("font.fnt"), Gdx.files.internal("font.png"), false);
     }
-    public static void resetGame(){
+    public void resetGame(){
         score=0;
     }
-    public static void update(){
+    public void update(){
         score+=1;
     }
-    public  void drawGame(){
-//        font.draw(MegaJumper.batch,score+"",MegaJumper.width/2,MegaJumper.camera.position.y+MegaJumper.height/2-font.getLineHeight());
+    public void drawGame(){
+        font.setColor(Color.BLACK);
+        font.draw(MegaJumper.batch,score+"",MegaJumper.width/2,MegaJumper.camera.position.y+MegaJumper.height/2-font.getLineHeight());
 //        font.draw(MegaJumper.batch,””+ score, MegaJumper.width/2,MegaJumper.camera.position.y+MegaJumper.height/2-font.getLineHeight());
     }
 }

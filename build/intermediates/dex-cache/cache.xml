@@ -2,18 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/core/build/libs/core-1.0.jar"
-        jumboMode="false"
-        revision="19.1.0"
-        sha1="a9dd7a69aaef04670816820ee5fe6784d2f7b8c8">
-        <dex dex="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/android/build/intermediates/pre-dexed/debug/core-1.0-45320fecd2c1b4f69b9c47e71fe4f40c090bf0dc.jar" />
-    </item>
-    <item
         jar="/Users/giselakottmeier/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.1.0/686f5a609c717eb0769d3b954c501a49bf4fe351/gdx-1.1.0.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="686f5a609c717eb0769d3b954c501a49bf4fe351">
         <dex dex="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/android/build/intermediates/pre-dexed/debug/gdx-1.1.0-114831ab72a4c21b505d1e34c6c6e98cc821aa3b.jar" />
+    </item>
+    <item
+        jar="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/core/build/libs/core-1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="4e24099c640d556cf48bea83d0ad46e633eb94e5">
+        <dex dex="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/android/build/intermediates/pre-dexed/debug/core-1.0-45320fecd2c1b4f69b9c47e71fe4f40c090bf0dc.jar" />
     </item>
     <item
         jar="/Users/giselakottmeier/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-android/1.1.0/be72ba2987612670c7e9533bdaaa999955752237/gdx-backend-android-1.1.0.jar"
