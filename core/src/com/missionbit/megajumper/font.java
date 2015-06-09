@@ -19,9 +19,6 @@ public class font {
     public void resetGame(){
         score=0;
     }
-    public void update(){
-        score+=1;
-    }
     public void drawGame(){
         font.setColor(Color.BLACK);
         font.draw(MegaJumper.batch,score+"",MegaJumper.width/2,MegaJumper.camera.position.y+MegaJumper.height/2-font.getLineHeight());

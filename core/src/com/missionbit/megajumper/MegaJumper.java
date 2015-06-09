@@ -13,7 +13,7 @@ public class MegaJumper extends ApplicationAdapter {
     public static SpriteBatch batch;
     public static int width;
     public static int height;
-    public int score;
+    public float score;
     public static OrthographicCamera camera;
     public Platforms platforms;
 
@@ -46,7 +46,7 @@ public class MegaJumper extends ApplicationAdapter {
     private void resetGame() {
         player.resetGame();
         Font.resetGame();
-        camera.position.set(width/2,height/2,0);
+        camera.position.set(width / 2, height / 2, 0);
         platforms.reset();
 
         score = 0;
@@ -54,7 +54,13 @@ public class MegaJumper extends ApplicationAdapter {
     }
 
     private void updateGame() {
-        Font.update();
+        if(score<player.playerPosition.y){
+            score=player.playerPosition.y;
+            System.out.print(player.playerPosition.y);
+            System.out.print("playerPos^");
+            System.out.print(score);
+            System.out.print("Score^");
+        }
         player.velocityMod(Gdx.input.getAccelerometerX()*-200, 'x');
 
 
