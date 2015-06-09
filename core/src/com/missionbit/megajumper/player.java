@@ -7,7 +7,7 @@ import com.badlogic.gdx.math.Rectangle;
 
 public class player {
     public static Vector2 playerPosition;
-    private static Vector2 playerVelocity;
+    public static Vector2 playerVelocity;
     public static Rectangle playerBounds;
     public static Texture playerImage;
     private static Vector2 gravity;

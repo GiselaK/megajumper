@@ -30,7 +30,7 @@ public class Platforms {
             objects[i].reset(0, 0);
         }
     }
-    public boolean checkCollision(OrthographicCamera camera) {
+    public boolean checkCollision() {
         for (int i = 0; i < platformCount; i++) {
             if (player.playerBounds.overlaps(objects[i].bounds)){
                 return true;

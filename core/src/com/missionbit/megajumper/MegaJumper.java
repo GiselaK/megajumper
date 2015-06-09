@@ -65,8 +65,12 @@ public class MegaJumper extends ApplicationAdapter {
 
 
 
-        if (platforms.checkCollision(camera)) {
-            player.velocityMod(750, 'y');
+        if (platforms.checkCollision()) {
+            if (player.playerVelocity.y > 0) {
+                //player.velocityMod(-500, 'y');
+            } else if (player.playerVelocity.y < 0) {
+                player.velocityMod(750, 'y');
+            }
             camera.position.y=player.playerPosition.y;
         }
 
@@ -78,9 +82,9 @@ public class MegaJumper extends ApplicationAdapter {
         batch.begin();
         Font.drawGame();
         camera.update();
+        platforms.draw(batch);
         batch.setProjectionMatrix(camera.combined);
         batch.draw(player.playerImage, player.playerPosition.x, player.playerPosition.y);
-        platforms.draw(batch);
         batch.end();
     }
 }
