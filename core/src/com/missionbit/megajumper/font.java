@@ -10,16 +10,16 @@ import com.missionbit.megajumper.MegaJumper;
  */
 public class font {
     private BitmapFont font;
-    private int score;
+
 
     public void create() {
 //        font = new Texture("font.png");
         font = new BitmapFont(Gdx.files.internal("font.fnt"), Gdx.files.internal("font.png"), false);
     }
     public void resetGame(){
-        score=0;
+
     }
-    public void drawGame(){
+    public void drawGame(int score){
         font.setColor(Color.BLACK);
         font.draw(MegaJumper.batch,score+"",MegaJumper.width/2,MegaJumper.camera.position.y+MegaJumper.height/2-font.getLineHeight());
 //        font.draw(MegaJumper.batch,””+ score, MegaJumper.width/2,MegaJumper.camera.position.y+MegaJumper.height/2-font.getLineHeight());
