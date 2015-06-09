@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/core/build/libs/core-1.0.jar"
+        jar="/Users/giselakottmeier/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.1.0/686f5a609c717eb0769d3b954c501a49bf4fe351/gdx-1.1.0.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="dbca51b1a9a7c2dd0dfabd1633f4ad6c1b8b20a1">
-        <dex dex="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/android/build/intermediates/pre-dexed/debug/core-1.0-45320fecd2c1b4f69b9c47e71fe4f40c090bf0dc.jar" />
+        sha1="686f5a609c717eb0769d3b954c501a49bf4fe351">
+        <dex dex="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/android/build/intermediates/pre-dexed/debug/gdx-1.1.0-114831ab72a4c21b505d1e34c6c6e98cc821aa3b.jar" />
     </item>
     <item
         jar="/Users/giselakottmeier/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx-backend-android/1.1.0/be72ba2987612670c7e9533bdaaa999955752237/gdx-backend-android-1.1.0.jar"
@@ -16,11 +16,11 @@
         <dex dex="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/android/build/intermediates/pre-dexed/debug/gdx-backend-android-1.1.0-616d9add82a4606a9d269f7dd7d2b13875d9f737.jar" />
     </item>
     <item
-        jar="/Users/giselakottmeier/.gradle/caches/modules-2/files-2.1/com.badlogicgames.gdx/gdx/1.1.0/686f5a609c717eb0769d3b954c501a49bf4fe351/gdx-1.1.0.jar"
+        jar="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/core/build/libs/core-1.0.jar"
         jumboMode="false"
         revision="19.1.0"
-        sha1="686f5a609c717eb0769d3b954c501a49bf4fe351">
-        <dex dex="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/android/build/intermediates/pre-dexed/debug/gdx-1.1.0-114831ab72a4c21b505d1e34c6c6e98cc821aa3b.jar" />
+        sha1="bcf99b7911c126aab0f5516ac8bfdb99d87e2025">
+        <dex dex="/Users/giselakottmeier/Desktop/projects/megajumperOurVersion/android/build/intermediates/pre-dexed/debug/core-1.0-45320fecd2c1b4f69b9c47e71fe4f40c090bf0dc.jar" />
     </item>
 
 </items>
