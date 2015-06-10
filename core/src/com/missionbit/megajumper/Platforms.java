@@ -38,6 +38,9 @@ public class Platforms {
         }
         return false;
     }
+    public void update() {
+
+    }
     public void draw(SpriteBatch batch) {
         for (int i = 0; i < platformCount; i++) {
             objects[i].draw(batch);

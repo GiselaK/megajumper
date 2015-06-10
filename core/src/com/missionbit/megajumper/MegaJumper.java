@@ -77,6 +77,7 @@ public class MegaJumper extends ApplicationAdapter {
             camera.position.y=player.playerPosition.y;
         }
 
+        platforms.update();
         player.update();
         camera.position.y=player.playerPosition.y;
     }
